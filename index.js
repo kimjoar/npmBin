@@ -27,7 +27,7 @@ var getNpmBin = function(name) {
     var bin = path.join('node_modules', '.bin', name);
     if (process.platform === 'win32') return bin + '.cmd';
     return bin;
-}
+};
 
 var envsToString = function(envs) {
     if (!envs) return '';

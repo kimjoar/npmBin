@@ -1,9 +1,9 @@
 {
   "name": "npm-bin",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Easily call local NPM binaries",
   "main": "index.js",
-  "repository": "",
+  "repository": "git://github.com/kjbekkelund/npmBin.git",
   "author": "Kim Joar Bekkelund",
   "license": "BSD",
   "readmeFilename": "README.md",
