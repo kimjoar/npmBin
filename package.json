@@ -1,0 +1,14 @@
+{
+  "name": "npmBin",
+  "version": "0.0.1",
+  "description": "Easily call local NPM binaries",
+  "main": "index.js",
+  "repository": "",
+  "author": "Kim Joar Bekkelund",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "underscore": "~1.4.4",
+    "shelljs": "~0.1.4"
+  }
+}
