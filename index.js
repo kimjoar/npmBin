@@ -3,8 +3,9 @@ var _ = require('underscore'),
     shell = require('shelljs'),
     querystring = require('querystring');
 
-exports = function(name, args, options) {
+module.exports = function(name, args, options) {
     options = options || {};
+    args = args || [];
 
     var bin = getNpmBin(name),
         envs = envsToString(options.envs),
