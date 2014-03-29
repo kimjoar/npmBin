@@ -7,7 +7,7 @@ module.exports = function(name, args, options) {
     options = options || {};
     args = args || [];
 
-    var bin = getNpmBin(name),
+    var bin = getNpmBin(name, options.basepath),
         envs = envsToString(options.envs),
         execOpts = _.pick(options, 'silent', 'async');
 
@@ -23,8 +23,9 @@ module.exports = function(name, args, options) {
     return shell.exec(envs + ' ' + bin + ' ' + args.join(' '), execOpts, options.callback);
 };
 
-var getNpmBin = function(name) {
-    var bin = path.join('node_modules', '.bin', name);
+var getNpmBin = function(name, basepath) {
+    basepath = basepath || '';
+    var bin = path.join(basepath, 'node_modules', '.bin', name);
     if (process.platform === 'win32') return bin + '.cmd';
     return bin;
 };
