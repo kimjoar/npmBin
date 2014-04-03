@@ -24,7 +24,7 @@ module.exports = function(name, args, options) {
 };
 
 var getNpmBin = function(name) {
-    var bin = path.join('node_modules', '.bin', name);
+    var bin = path.join(__dirname, '..', '.bin', name);
     if (process.platform === 'win32') return bin + '.cmd';
     return bin;
 };
